@@ -8,3 +8,5 @@ body {
 @media only screen and (max-width: 600px) {
   .wrapper { padding: 50px 10% 150px 20%; }
 }
+
+#profile { width: 200px; }
