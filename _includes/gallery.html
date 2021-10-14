@@ -1,0 +1,9 @@
+<div class="images-gallery">
+  {% for number in (1..include.number) %}
+    <div class="image-gallery">
+      <a href="/assets/img/{{ include.file_name_prefix }}-{{ number }}.{{ include.ext }}">
+        <img src="/assets/img/{{ include.file_name_prefix }}-{{ number }}.{{ include.ext }}">
+      </a>
+    </div>
+  {% endfor %}
+</div>

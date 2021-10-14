@@ -3,10 +3,30 @@ body {
   font-size: 1.15em;
 }
 
-.wrapper { padding: 50px 20% 150px 20%; }
-
-@media only screen and (max-width: 600px) {
-  .wrapper { padding: 50px 10% 150px 10%; }
-}
+.wrapper { padding: 50px 15% 150px 15%; }
 
 #profile { width: 200px; }
+
+.image-gallery img { width: 100%; }
+.image-gallery { padding: 10px; }
+
+.images-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .wrapper { padding: 50px 8% 150px 8%; }
+  .images-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .wrapper { padding: 50px 10% 150px 10%; }
+  .images-gallery { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .wrapper { padding: 50px 8% 150px 8%; }
+  .images-gallery { grid-template-columns: repeat(1, 1fr); }
+}
